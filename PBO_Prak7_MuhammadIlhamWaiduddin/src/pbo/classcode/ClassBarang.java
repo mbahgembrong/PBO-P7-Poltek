@@ -139,12 +139,12 @@ public class ClassBarang {
         try{
             conn = ClassConnection.getKoneksi();
             st = conn.createStatement();
-            String sql = "select count(*) from barang where kode like '%"+key+"%'";
+            String sql = "select count(*) from barang where nama like '%"+key+"%'";
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 ndata = rs.getInt("COUNT(*)");
             }
-            sql = "select * from barang where kode like '%"+key+"%'";
+            sql = "select * from barang where nama like '%"+key+"%'";
             rs = st.executeQuery(sql);
             data = new Object[ndata][4];
             int idx=0;
