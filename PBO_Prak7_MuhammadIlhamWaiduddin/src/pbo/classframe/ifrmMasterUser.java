@@ -18,12 +18,7 @@ public class ifrmMasterUser extends javax.swing.JInternalFrame {
      * Creates new form ifrmMasterUser
      */
     
-    DefaultTableModel tabelmodel;
     
-    public ifrmMasterUser() {
-        initComponents();
-        loadData();
-    }
     
     public void loadData(){
         ModelTabelUser();
@@ -56,7 +51,12 @@ public class ifrmMasterUser extends javax.swing.JInternalFrame {
             tabelmodel.addRow(data1);
         }
     }
+    DefaultTableModel tabelmodel;
     
+    public ifrmMasterUser() {
+        initComponents();
+        loadData();
+    }
     public void ModelTabelUser(){
         tabelmodel = new DefaultTableModel();
         jTable1.setModel(tabelmodel);
